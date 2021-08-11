@@ -18,7 +18,7 @@
         <div  class="top-bar">
             <div style="color:white" class="top-bar-left">
                 <h4 class="brand-title">
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                         <i class="fa fa-home fa-lg" aria-hidden="true">
                         </i>
                         Men Shirts Corner
@@ -28,7 +28,7 @@
             <div class="top-bar-right">
                 <ol class="menu">
                     <li>
-                        <a href="shirts.html">
+                        <a href="{{ route('home.shirts') }}">
                             SHIRTS
                         </a>
                     </li>

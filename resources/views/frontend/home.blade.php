@@ -13,7 +13,7 @@
                 </strong>
             </h2>
             <br>
-            <a href="shirts.html"><button class="button large">Check out My Shirts</button></a>
+            <a href="{{ route('home.shirts') }}"><button class="button large">Check out My Shirts</button></a>
         </section>
         <br/>
         <div class="subheader text-center">
@@ -30,7 +30,7 @@
                         <a class="button expanded add-to-cart">
                             Add to Cart
                         </a>
-                        <a href="#">
+                        <a href="{{ route('home.shirt') }}">
                             <img src="{{ asset('dist/img/shirts/shirt-107.jpg') }}"/>
                         </a>
                     </div>

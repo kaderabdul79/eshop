@@ -16,4 +16,6 @@ use App\Http\Controllers\HomeController;
 // Route::get('/', function () {
 //     return view('layouts.main');
 // });
-Route::get('/', [HomeController::class,'index']);
+Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/shirts', [HomeController::class,'shirts'])->name('home.shirts');
+Route::get('/shirt', [HomeController::class,'shirt'])->name('home.shirt');
