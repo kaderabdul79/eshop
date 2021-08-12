@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +25,13 @@ Route::get('/shirt', [FrontController::class,'shirt'])->name('home.shirt');
 Route::get('/admin', function(){
     return view('admin.index');
 })->name('admin.index');
+
+Route::get('/product', [ProductsController::class,'create'])->name('product.create');
+
+Route::get('/login', [AdminController::class,'login'])->name('admin.login');
+Route::post('/login', [AdminController::class,'loginProcess'])->name('admin.loginProcess');
+
+Route::get('/signin', [AdminController::class,'signin'])->name('admin.signin');
+Route::post('/signin', [AdminController::class,'signinProcess'])->name('admin.signinProcess');
+
+Route::get('/logout', [AdminController::class,'logout'])->name('admin.logout');
